@@ -1,0 +1,23 @@
+section.main-section {
+    min-height: 100vh;;
+}
+
+.ant {
+    &-menu {
+        & > li {
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.logo {
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-family: cursive;
+    display: block;
+    // text-align: center;
+    padding-left: 24px;
+}
