@@ -4,7 +4,6 @@ import { Layout } from 'antd';
 import Sidebar from '../Sidebar/Sidebar';
 import MainContent from '../MainContent/MainContent';
 
-
 const { Header, Footer, Content } = Layout;
 
 export default function MainLayout() {
@@ -19,7 +18,8 @@ export default function MainLayout() {
                     </div>
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
-                    Find free games ©2021 Created by <a href="mailto:elmagxd@gmail.com">elmagxd</a>
+                    Find free games ©2021 Created by
+                    <a href="mailto:elmagxd@gmail.com">elmagxd</a>
                 </Footer>
             </Layout>
         </Layout>
