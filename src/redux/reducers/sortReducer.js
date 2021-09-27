@@ -16,6 +16,8 @@ const sortReducer = (state = {}, action) => {
                 ...state,
                 sortby: action.data,
             };
+        case 'CLEAR_SORT':
+            return {};
         default:
             return state;
     }

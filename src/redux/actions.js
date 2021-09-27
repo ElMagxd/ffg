@@ -19,3 +19,9 @@ export const changeSortBy = data => {
         data,
     };
 };
+
+export const clearSort = () => {
+    return {
+        type: 'CLEAR_SORT',
+    };
+};

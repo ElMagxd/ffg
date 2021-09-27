@@ -1,8 +1,8 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
-import { SortAscendingOutlined, LaptopOutlined, TagsOutlined } from '@ant-design/icons';
+import { SortAscendingOutlined, LaptopOutlined, TagsOutlined, ClearOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
-import { changePlatform, changeGenre, changeSortBy } from '../../redux/actions';
+import { changePlatform, changeGenre, changeSortBy, clearSort } from '../../redux/actions';
 
 const { Header, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -11,6 +11,10 @@ export default function Sidebar() {
     const dispatch = useDispatch();
 
     const handleMenuClick = ({ keyPath: [, type], key: data }) => {
+        if (data === 'clearAll') {
+            dispatch(clearSort());
+            return;
+        }
         switch (type) {
             case 'platforms':
                 dispatch(changePlatform(data));
@@ -36,6 +40,7 @@ export default function Sidebar() {
                 defaultSelectedKeys={['all', 'clear', 'relevance']}
                 style={{ height: '100%', borderRight: 0 }}
                 onClick={handleMenuClick}
+                // theme='dark'
             >
                 <SubMenu key="platforms" icon={<LaptopOutlined />} title="Platform">
                     <Menu.Item key="all">All platforms</Menu.Item>
@@ -55,6 +60,7 @@ export default function Sidebar() {
                     <Menu.Item key="release-date">Release date</Menu.Item>
                     <Menu.Item key="alphabetical">Alphabetical</Menu.Item>
                 </SubMenu>
+                <Menu.Item key="clearAll" icon={<ClearOutlined />}>Clear all</Menu.Item>
             </Menu>
         </Sider>
     );
