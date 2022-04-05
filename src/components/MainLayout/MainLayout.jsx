@@ -19,7 +19,7 @@ export default function MainLayout() {
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
                     Find free games ©2021 Created by
-                    <a href="mailto:elmagxd@gmail.com">elmagxd</a>
+                    <a href="mailto:elmagxd@gmail.com"> elmagxd</a>
                 </Footer>
             </Layout>
         </Layout>

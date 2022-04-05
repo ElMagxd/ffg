@@ -16,7 +16,7 @@ export default function MainContent() {
     // const { platform = 'all', genre, sortby } = useSelector(state => state);
 
     // TODO: delete clg
-    console.log(fetchURL);
+    // console.log(fetchURL);
 
     store.subscribe(() => {
         const { platform = 'all', genre, sortby } = store.getState();
